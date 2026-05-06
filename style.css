@@ -496,16 +496,22 @@ body {
     }
 } /* <--- QUESTA PARENTESI MANCAVA E BLOCCAVA TUTTO */
 
-/* SEZIONE CONTATTI */
+/* =========================================
+   SEZIONE CONTATTI - FIX DEFINITIVO
+   ========================================= */
+
 .contact-section {
     padding: 100px 20px;
     text-align: center;
     background-color: transparent; 
     border-top: 1px solid rgba(0, 210, 255, 0.1);
+    clear: both; /* Pulisce eventuali float precedenti */
+    width: 100%;
+    display: block;
 }
 
 .contact-section h2 {
-    font-family: 'Orbitron', sans-serif; /* Font futuristico */
+    font-family: 'Orbitron', sans-serif;
     font-size: 45px;
     color: #ffffff;
     margin-bottom: 15px;
@@ -513,12 +519,12 @@ body {
     letter-spacing: 2px;
 }
 
+/* Colore futuristico blu per il titolo */
 .contact-section h2 .accent-blue {
-    color: #00d2ff; /* Il tuo blu futuristico */
+    color: #00d2ff !important; 
     text-shadow: 0 0 15px rgba(0, 210, 255, 0.6), 0 0 30px rgba(0, 210, 255, 0.2);
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 3px;
-    text-transform: uppercase;
 }
 
 .contact-section p {
@@ -528,50 +534,69 @@ body {
     margin-bottom: 40px;
 }
 
+/* Contenitore Bottoni: Flexbox per allineamento perfetto */
 .contact-buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Stile base per TUTTI i bottoni (Contattami e Social) */
+/* Stile base per bottoni (Sfondo trasparente di base) */
 .btn-main-contact, .btn-social {
-    background-color: transparent; /* Sfondo trasparente di base */
+    background-color: transparent !important; 
     color: #ffffff !important;
-    padding: 15px 35px;
+    padding: 15px 30px;
     border-radius: 50px;
     text-decoration: none;
     font-family: 'Orbitron', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    border: 2px solid #30363d; /* Bordo scuro di base */
-    transition: all 0.4s ease; /* Transizione fluida */
+    border: 2px solid #30363d;
+    transition: all 0.3s ease-in-out;
+    min-width: 180px; /* Rende i bottoni uniformi */
 }
 
-/* EFFETTO HOVER: Quando passi il cursore */
+/* --- EFFETTI HOVER (Solo al passaggio del mouse) --- */
 
-/* Hover specifico per Contattami */
+/* Hover Contattami: diventa blu pieno */
 .btn-main-contact:hover {
-    background-color: #00d2ff;
+    background-color: #00d2ff !important;
     color: #050a14 !important;
-    border-color: #00d2ff;
+    border-color: #00d2ff !important;
     box-shadow: 0 0 25px rgba(0, 210, 255, 0.6);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
-/* Hover per i Social */
+/* Hover Social: solo bordo e testo si illuminano */
 .btn-social:hover {
-    border-color: #00d2ff;
+    border-color: #00d2ff !important;
     color: #00d2ff !important;
+    background-color: rgba(0, 210, 255, 0.05) !important;
     box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
-/* Icone */
+/* Fix Icone */
 .contact-buttons i {
-    font-size: 20px;
+    font-size: 18px;
+    pointer-events: none; /* Evita che l'icona disturbi il click */
+}
+
+/* Responsive: bottoni impilati su schermi piccoli */
+@media (max-width: 600px) {
+    .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-main-contact, .btn-social {
+        width: 90%;
+    }
 }

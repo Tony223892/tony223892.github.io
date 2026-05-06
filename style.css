@@ -477,7 +477,7 @@ body {
     .timeline-line {
         width: 2px;
         height: 100%;
-        left: 50px; /* Allineato verticalmente al centro del pallino */
+        left: 50px;
         top: 0;
     }
     .timeline-h-item {
@@ -494,59 +494,84 @@ body {
         text-align: left;
         padding: 0;
     }
-    /* Stile Modali */
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 9999;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(5, 10, 20, 0.9); /* Sfondo scuro semitrasparente */
-    backdrop-filter: blur(10px);
+} /* <--- QUESTA PARENTESI MANCAVA E BLOCCAVA TUTTO */
+
+/* SEZIONE CONTATTI */
+.contact-section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: transparent; 
+    border-top: 1px solid rgba(0, 210, 255, 0.1);
 }
 
-.modal-content {
-    background-color: #0a1220;
-    margin: 10% auto;
-    padding: 40px;
-    border: 1px solid var(--neon-blue);
-    width: 60%;
-    max-width: 800px;
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(0, 210, 255, 0.2);
-    position: relative;
-    font-family: 'Exo 2', sans-serif;
-}
-
-.modal-content h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.school-name {
-    color: var(--neon-blue);
-    font-weight: 600;
-    margin-bottom: 25px;
-}
-
-.modal-body p {
+.contact-section h2 {
+    font-family: 'Orbitron', sans-serif; /* Font futuristico */
+    font-size: 45px;
+    color: #ffffff;
     margin-bottom: 15px;
-    color: var(--text-color);
-    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.close {
-    position: absolute;
-    right: 20px; top: 15px;
-    color: var(--neon-blue);
-    font-size: 28px;
+.contact-section h2 .accent-blue {
+    color: #00d2ff; /* Il tuo blu futuristico */
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.6), 0 0 30px rgba(0, 210, 255, 0.2);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.contact-section p {
+    font-family: 'Exo 2', sans-serif;
+    color: #a0a0a0;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Stile base per TUTTI i bottoni (Contattami e Social) */
+.btn-main-contact, .btn-social {
+    background-color: transparent; /* Sfondo trasparente di base */
+    color: #ffffff !important;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #30363d; /* Bordo scuro di base */
+    transition: all 0.4s ease; /* Transizione fluida */
 }
 
-.close:hover {
-    color: #fff;
-    text-shadow: 0 0 10px var(--neon-blue);
+/* EFFETTO HOVER: Quando passi il cursore */
+
+/* Hover specifico per Contattami */
+.btn-main-contact:hover {
+    background-color: #00d2ff;
+    color: #050a14 !important;
+    border-color: #00d2ff;
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.6);
+    transform: translateY(-3px);
 }
+
+/* Hover per i Social */
+.btn-social:hover {
+    border-color: #00d2ff;
+    color: #00d2ff !important;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Icone */
+.contact-buttons i {
+    font-size: 20px;
 }

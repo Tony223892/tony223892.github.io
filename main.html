@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Marco Giglietto | Portfolio</title>
+
+    <!-- RIGA DA AGGIUNGERE PER IL LOGO -->
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+
+    <link rel="stylesheet" href="style scuro.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">PORTFOLIO</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#istruzione">Istruzione</a></li>
+                <li><a href="#progetti">Progetti</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Ciao, sono <span class="accent"> Antonio Marco Giglietto </span></h1>
+                <p class="tagline">Sviluppatore | Innovatore | Sognatore</p>
+                <p class="bio">
+                    Specializzando in Cybersecurity e Intelligenza Artificiale. 
+                    Amo trasformare sfide complesse in architetture sicure e all'avanguardia.
+                </p>
+                <a href="#progetti" class="btn-main">CODE. CREATE. CONQUER.</a>
+            </div>
+            
+            <div class="hero-image">
+                <div class="jarvis-hud-container">
+                    <canvas id="visualizerCanvas"></canvas>
+                    <div class="glow-circle-jarvis">
+                        <img src="tua-foto.jpg" alt="Foto Profilo">
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </section>
+
+    <section id="istruzione" class="section">
+        <h2 class="title">Istruzione</h2>
+        <div class="timeline-horizontal">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-h-item">
+                <div class="dot"></div>
+                <div class="content">
+                    <span class="date">01/09/2025 - Attuale</span>
+                    <h3>Laurea Magistrale in Computer Science Security Engineering</h3>
+                    <p>Università degli Studi Aldo Moro di Bari</p>
+                    <button class="btn-details" onclick="openModal('modal-magistrale')">Esplora dettagli</button>
+                </div>
+            </div>
+
+            <div class="timeline-h-item">
+                <div class="dot"></div>
+                <div class="content">
+                    <span class="date">01/09/2022 - 15/10/2025</span>
+                    <h3>Laurea Triennale in Informatica</h3>
+                    <p>Università degli Studi Aldo Moro di Bari</p>
+                    <button class="btn-details" onclick="openModal('modal-triennale')">Esplora dettagli</button>
+                </div>
+            </div>
+
+            <div class="timeline-h-item">
+                <div class="dot"></div>
+                <div class="content">
+                    <span class="date">Conseguito nel 07/2022</span>
+                    <h3>Diploma di Scuola Europea (Baccalauréat)</h3>
+                    <p>Europäische Schule München</p>
+                    <button class="btn-details" onclick="openModal('modal-diploma')">Esplora dettagli</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-diploma" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-diploma')">&times;</span>
+        <h2>DIPLOMA DI SCUOLA EUROPEA</h2>
+        <p class="school-name">Europäische Schule München (Monaco di Baviera) | 09/2017 - 07/2022</p>
+        <div class="modal-body">
+            <p>Diploma conseguito presso la <strong>Scuola Europea di Monaco di Baviera</strong>. Questo percorso formativo mi ha permesso di sviluppare un <strong>forte pensiero critico</strong> e ottime capacità di <strong>problem-solving</strong>.</p>
+            <p>Ho acquisito un approccio analitico nella risoluzione di problemi complessi e una forte attitudine all'apprendimento continuo, bilanciando competenze <strong>tecnico-scientifiche</strong> e cultura generale.</p>
+            
+            <p class="voto"><strong>Voto finale:</strong> 74/100</p>
+            <p class="livello"><strong>Livello:</strong> 4 EQF</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-triennale" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-triennale')">&times;</span>
+        <h2 class="accent">LAUREA TRIENNALE IN INFORMATICA</h2>
+        <p class="school-name">Università degli Studi Aldo Moro di Bari | 09/2022 - 17/07/2025</p>
+        
+        <div class="modal-body">
+            <p>
+                Durante il mio percorso accademico in <strong>Informatica</strong>, ho consolidato un <strong>approccio analitico</strong> e un <strong>pensiero computazionale</strong> orientato all'efficienza e alla risoluzione di problemi complessi. 
+            </p>
+            <p>
+                La formazione mi ha permesso di acquisire competenze verticali su tutto il <strong>ciclo di vita del software</strong> — dalla fase critica di analisi dei requisiti fino al <strong>testing e deployment</strong> — integrando solide basi nella progettazione di <strong>Database</strong> e nella gestione di <strong>infrastrutture di rete</strong>. 
+            </p>
+            <p>
+                Ho sviluppato una forte attitudine al <strong>lavoro di squadra</strong> in contesti progettuali sfidanti, mantenendo sempre un focus rigoroso sulla logica e sulla scalabilità del codice.
+            </p>
+
+            <hr style="border: 0; border-top: 1px solid rgba(0, 210, 255, 0.2); margin: 20px 0;">
+
+            <p><strong>Voto finale:</strong> 104/110</p>
+            <p><strong>Tesi:</strong> <strong>"Blurred Mind: Simulazione VR degli effetti di alcol e droghe in un ambiente urbano"</strong></p>
+            <p><strong>Livello:</strong> 6 EQF</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-magistrale" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-magistrale')">&times;</span>
+        <h2 class="accent">LAUREA MAGISTRALE IN COMPUTER SCIENCE</h2>
+        <p class="school-name">Università degli Studi Aldo Moro di Bari | 09/2025 - In corso</p>
+        
+        <div class="modal-body">
+            <p>
+                Attualmente frequento il corso di Laurea Magistrale internazionale in <strong>Computer Science</strong>, con una specializzazione nel curriculum di <strong>Security Engineering</strong>.
+            </p>
+            <p>Il mio studio si concentra sull'analisi e la mitigazione delle moderne minacce alla <strong>Cybersecurity</strong>, con un focus particolare sullo sviluppo di <strong>software sicuro</strong> "by design".</p>
+            <p>
+                Sto approfondendo la progettazione di <strong>architetture resilienti</strong> e sistemi di difesa avanzati, integrando metodologie di <strong>analisi del rischio</strong> e l'uso dell'<strong>Intelligenza Artificiale applicata alla sicurezza</strong> (AI for Security) per prevenire attacchi complessi.
+            </p>
+            <p>
+                Il mio obiettivo è tradurre queste competenze accademiche in soluzioni reali, contribuendo alla creazione di ecosistemi digitali <strong>sicuri e affidabili</strong>.
+            </p>
+
+            <hr style="border: 0; border-top: 1px solid rgba(0, 210, 255, 0.2); margin: 20px 0;">
+
+            <p><strong>Media attuale:</strong> 27/30</p>
+            <p><strong>Curriculum:</strong> Security Engineering</p>
+            <p><strong>Livello:</strong> 7 EQF</p>
+        </div>
+    </div>
+</div>
+    <section id="progetti" class="section">
+    <h2 class="title">Progetti</h2>
+   <div class="grid-projects">
+        
+        <div class="card">
+            <h3>Gaming Behaviour Analyzer</h3>
+            <p>Process Mining applicato al Gaming</p>
+            <button class="btn-view" onclick="openModal('modal-gaming')">Visualizza</button>
+        </div>
+        
+        <div class="card">
+            <h3>Mneme</h3>
+            <p>Unity 3D | Mystery Game</p>
+            <button class="btn-view" onclick="openModal('modal-mneme')">Visualizza</button>
+        </div>
+
+        <div class="card">
+            <h3>GreenCare Services (GCS)</h3>
+            <p>Web App & Database Management</p>
+            <button class="btn-view" onclick="openModal('modal-greencare')">Visualizza</button>
+        </div>
+
+        <div class="card">
+            <h3>The Legend of Troy</h3>
+            <p>Web Development | Storico-Letterario</p>
+            <button class="btn-view" onclick="openModal('modal-troy')">Visualizza</button>
+        </div>
+
+        <div class="card">
+            <h3>Ataxx</h3>
+            <p>Board Game | Strategia & Logica</p>
+            <button class="btn-view" onclick="openModal('modal-ataxx')">Visualizza</button>
+        </div>
+
+    </div> </section>
+
+    <div id="modal-gaming" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-gaming')">&times;</span>
+            <h2 class="accent">Gaming Behaviour Analyzer</h2>
+            <div class="modal-body">
+                <p>
+                    <strong>Gaming Behaviour Analyzer</strong> è un software analitico progettato per l'estrazione di conoscenza dai log di gioco attraverso tecniche avanzate di <strong>Process Mining</strong>.
+                </p>
+                <p>
+                    Il sistema elabora dataset complessi in formato <strong>CSV</strong>, implementando e confrontando diversi algoritmi di discovery per ricostruire i modelli di comportamento degli utenti:
+                </p>
+                <ul style="list-style: none; padding-left: 0; margin: 15px 0;">
+                    <li>🚀 <strong>Alpha Miner:</strong> per la logica causale di base.</li>
+                    <li>🧬 <strong>Inductive Miner:</strong> per garantire modelli strutturati e privi di deadlock.</li>
+                    <li>🔍 <strong>Heuristic Miner:</strong> per gestire rumore e frequenze nei dati reali.</li>
+                </ul>
+                <p>
+                    L'applicativo permette di trasformare dati grezzi in flussi decisionali visibili, ottimizzando il game design sulla base dell'evidenza statistica.
+                </p>
+                
+                <hr style="border: 0; border-top: 1px solid rgba(0, 210, 255, 0.1); margin: 20px 0;">
+                
+                <p style="margin-bottom: 20px;"><strong>Tecnologie:</strong> Python, PM4Py, Pandas, CSV Analysis.</p>
+                
+                <a href="https://github.com/Tony223892/GamingBehavior_Analyzer" target="_blank" class="btn-main" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+    <i class="fab fa-github"></i> VEDI SU GITHUB
+</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="modal-mneme" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-mneme')">&times;</span>
+        <h2 class="accent">Mneme</h2>
+        <div class="modal-body">
+            <p>
+                <strong>Mneme</strong> è un videogioco 3D sviluppato in <strong>Unity</strong> che unisce narrazione mystery e puzzle-solving. 
+            </p>
+            <p>
+                La storia segue le vicende di uno <strong>scienziato che ha misteriosamente perso la memoria</strong>. Per ricostruire i frammenti del suo passato e recuperare i propri ricordi, il protagonista dovrà esplorare diverse stanze, ognuna contenente <strong>mini-giochi e rompicapi</strong> unici da risolvere.
+            </p>
+            
+            <p><strong>Caratteristiche Tecniche:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin: 15px 0;">
+                <li>🧠 <strong>Puzzle System:</strong> Logiche di gioco sviluppate interamente in C#.</li>
+                <li>🏠 <strong>Ambiente 3D:</strong> Progettazione di stanze interattive con asset personalizzati.</li>
+                <li>📖 <strong>Narrativa Immersiva:</strong> Integrazione tra gameplay e progressione della storia.</li>
+            </ul>
+
+            <div style="background: rgba(0, 210, 255, 0.05); padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--accent);">
+                <p style="margin: 0; font-size: 0.9em;">
+                    <strong>Collaboratori:</strong><br>
+                    Sviluppato in team con: <em>Stefano Rosario Alise, Francesca Cataldi e Federica Di Terlizzi</em>.
+                </p>
+            </div>
+            
+            <hr style="border: 0; border-top: 1px solid rgba(0, 210, 255, 0.1); margin: 20px 0;">
+            
+            <p style="margin-bottom: 20px;"><strong>Tecnologie:</strong> Unity, C#, Game Design.</p>
+            
+            <a href="https://github.com/Tony223892/Mneme" target="_blank" class="btn-main" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                <i class="fab fa-github"></i> VEDI SU GITHUB
+            </a>
+        </div>
+    </div>
+</div>
+<!-- NUOVO MODALE THE LEGEND OF TROY -->
+    <div id="modal-troy" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-troy')">&times;</span>
+            <h2 class="accent">The Legend of Troy</h2>
+            <div class="modal-body">
+                <p>
+                    <strong>The Legend of Troy</strong> mette a confronto il racconto epico dell'Iliade con le scoperte archeologiche reali.
+                </p>
+                <p>
+                    Un'analisi dettagliata sulle discrepanze tra il mito di Omero e i fatti storici documentati.
+                </p>
+
+                <!-- SEZIONE COLLABORATORI -->
+                <div style="background: rgba(0, 210, 255, 0.05); padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--accent);">
+                    <p style="margin: 0; font-size: 0.9em;">
+                        <strong>Collaboratori:</strong><br>
+                        Sviluppato in team con: <em>Stefano Rosario Alise, Francesca Cataldi e Federica Di Terlizzi</em>.
+                    </p>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid rgba(0, 210, 255, 0.1); margin: 20px 0;">
+                
+                <p style="margin-bottom: 20px;"><strong>Tecnologie:</strong> HTML5, CSS3, JavaScript.</p>
+                
+                <a href="https://github.com/Tony223892/The-Legend-Of-Troy" target="_blank" class="btn-main" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fab fa-github"></i> VEDI SU GITHUB
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- MODALE ATAXX -->
+    <div id="modal-ataxx" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-ataxx')">&times;</span>
+            <h2 class="accent">Ataxx</h2>
+            <div class="modal-body">
+                <p>
+                    <strong>Ataxx</strong> è la trasposizione digitale del celebre gioco da tavolo di strategia astratta, focalizzato sulla conquista del territorio e sulla conversione delle pedine avversarie.
+                </p>
+                <p>
+                    Il progetto implementa le regole classiche di movimento (clonazione e salto) e una logica di gioco fluida, mettendo alla prova le abilità tattiche del giocatore contro un avversario.
+                </p>
+
+                <div style="background: rgba(0, 210, 255, 0.05); padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--accent);">
+                    <p style="margin: 0; font-size: 0.9em;">
+                        <strong>Collaboratori:</strong><br>
+                        Sviluppato in team con: <em>Stefano Rosario Alise, Achille Carbonara, Alex Longo, Angelo Bellissimo, Michele Bruno e Federico Di Punzio</em>.
+                    </p>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid rgba(0, 210, 255, 0.1); margin: 20px 0;">
+                
+                <p style="margin-bottom: 20px;"><strong>Tecnologie:</strong> Java / C# (o la tecnologia che hai usato), Game Logic, UI Design.</p>
+                
+                <a href="https://github.com/Tony223892/Ataxx" target="_blank" class="btn-main" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fab fa-github"></i> VEDI SU GITHUB
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALE GreenCare-->
+    <div id="modal-greencare" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-greencare')">&times;</span>
+        <h2 class="accent">GreenCare Services (GCS)</h2>
+        <div class="modal-body">
+            <p>Progetto accademico sviluppato nell'ambito del corso di <strong>DataBase Systems</strong>. GreenCare Services è un'applicazione web full-stack supportata da un robusto database relazionale a oggetti (<strong>ORDBMS</strong>) in ambiente <strong>Oracle</strong>. Il sistema digitalizza il ciclo di vita operativo di un'azienda specializzata nella cura del verde.</p>
+            
+            <p><strong>Stack Tecnologico:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin: 15px 0;">
+                <li>🗄️ <strong>Database:</strong> Oracle Database (PL/SQL), modellazione Object-Relational.</li>
+                <li>⚙️ <strong>Backend & Server:</strong> Java, JDBC, Apache Tomcat.</li>
+                <li>💻 <strong>Frontend:</strong> HTML, CSS, JSP.</li>
+            </ul>
+
+            <p><strong>Architettura e Ottimizzazione:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin: 15px 0;">
+                <li>🔹 <strong>Design Object-Relational:</strong> Utilizzo di ereditarietà (super-tipi e sub-tipi), puntatori a oggetti (REF) e tabelle annidate.</li>
+                <li>🔹 <strong>Automazione:</strong> Sviluppo di Stored Procedures e Trigger per garantire le Business Rules.</li>
+                <li>🔹 <strong>Performance:</strong> Analisi dei piani di esecuzione e indici B-Tree manuali, riducendo i costi delle query fino al 78%.</li>
+            </ul>
+
+            <hr style="border: 0; border-top: 1px solid rgba(0, 210, 255, 0.1); margin: 20px 0;">
+            
+            <a href="https://github.com/Tony223892/GreenCareApp_Service" target="_blank" class="btn-main" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                <i class="fab fa-github"></i> VEDI SU GITHUB
+            </a>
+        </div>
+    </div>
+</div>
+
+
+    <section id="contact" class="contact-section">
+    <h2><span class="accent-blue">Iniziamo un Progetto.</span></h2>
+    <p>Disponibile per consulenze e collaborazioni tecniche.</p>
+    
+    
+    <div class="contact-buttons">
+        <a href="mailto:a.giglietto@studenti.uniba.it" class="btn-main-contact">
+    <i class="fas fa-envelope"></i> Contattami
+        </a>
+        
+        <a href="https://www.linkedin.com/in/antonio-marco-giglietto-a373ba358" target="_blank" class="btn-social">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        
+        <a href="https://github.com/Tony223892" target="_blank" class="btn-social">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+        
+        <a href="https://www.instagram.com/antogig_/" target="_blank" class="btn-social">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </div>
+</section>
+    <script src="script.js"></script>
+
+</body>
+</html>

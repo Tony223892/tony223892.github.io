@@ -155,36 +155,41 @@
         </div>
     </div>
 </div>
-
-   <section id="progetti" class="section">
-        <h2 class="title">Progetti</h2>
-        <div class="grid-projects">
-            <div class="card">
-                <h3>Gaming Behaviour Analyzer</h3>
-                <p>Process Mining applicato al Gaming</p>
-                <button class="btn-view" onclick="openModal('modal-gaming')">Visualizza</button>
-            </div>
-            
-            
+    <section id="progetti" class="section">
+    <h2 class="title">Progetti</h2>
+   <div class="grid-projects">
+        
         <div class="card">
-    <h3>Mneme</h3>
-    <p>Unity 3D | Mystery Game</p>
-    <button class="btn-view" onclick="openModal('modal-mneme')">Visualizza</button>
-</div>
-<!-- NUOVA CARD THE LEGEND OF TROY -->
-            <div class="card">
-                <h3>The Legend of Troy</h3>
-                <p>Web Development | Storico-Letterario</p>
-                <button class="btn-view" onclick="openModal('modal-troy')">Visualizza</button>
-            </div>
+            <h3>Gaming Behaviour Analyzer</h3>
+            <p>Process Mining applicato al Gaming</p>
+            <button class="btn-view" onclick="openModal('modal-gaming')">Visualizza</button>
         </div>
-<!-- CARD ATAXX -->
-            <div class="card">
-                <h3>Ataxx</h3>
-                <p>Board Game | Strategia & Logica</p>
-                <button class="btn-view" onclick="openModal('modal-ataxx')">Visualizza</button>
-            </div>
-    </section>
+        
+        <div class="card">
+            <h3>Mneme</h3>
+            <p>Unity 3D | Mystery Game</p>
+            <button class="btn-view" onclick="openModal('modal-mneme')">Visualizza</button>
+        </div>
+
+        <div class="card">
+            <h3>GreenCare Services (GCS)</h3>
+            <p>Web App & Database Management</p>
+            <button class="btn-view" onclick="openModal('modal-greencare')">Visualizza</button>
+        </div>
+
+        <div class="card">
+            <h3>The Legend of Troy</h3>
+            <p>Web Development | Storico-Letterario</p>
+            <button class="btn-view" onclick="openModal('modal-troy')">Visualizza</button>
+        </div>
+
+        <div class="card">
+            <h3>Ataxx</h3>
+            <p>Board Game | Strategia & Logica</p>
+            <button class="btn-view" onclick="openModal('modal-ataxx')">Visualizza</button>
+        </div>
+
+    </div> </section>
 
     <div id="modal-gaming" class="modal">
         <div class="modal-content">
@@ -315,6 +320,39 @@
             </div>
         </div>
     </div>
+
+    <!-- MODALE GreenCare-->
+    <div id="modal-greencare" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-greencare')">&times;</span>
+        <h2 class="accent">GreenCare Services (GCS)</h2>
+        <div class="modal-body">
+            <p>Progetto accademico sviluppato nell'ambito del corso di <strong>DataBase Systems</strong>. GreenCare Services è un'applicazione web full-stack supportata da un robusto database relazionale a oggetti (<strong>ORDBMS</strong>) in ambiente <strong>Oracle</strong>. Il sistema digitalizza il ciclo di vita operativo di un'azienda specializzata nella cura del verde.</p>
+            
+            <p><strong>Stack Tecnologico:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin: 15px 0;">
+                <li>🗄️ <strong>Database:</strong> Oracle Database (PL/SQL), modellazione Object-Relational.</li>
+                <li>⚙️ <strong>Backend & Server:</strong> Java, JDBC, Apache Tomcat.</li>
+                <li>💻 <strong>Frontend:</strong> HTML, CSS, JSP.</li>
+            </ul>
+
+            <p><strong>Architettura e Ottimizzazione:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin: 15px 0;">
+                <li>🔹 <strong>Design Object-Relational:</strong> Utilizzo di ereditarietà (super-tipi e sub-tipi), puntatori a oggetti (REF) e tabelle annidate.</li>
+                <li>🔹 <strong>Automazione:</strong> Sviluppo di Stored Procedures e Trigger per garantire le Business Rules.</li>
+                <li>🔹 <strong>Performance:</strong> Analisi dei piani di esecuzione e indici B-Tree manuali, riducendo i costi delle query fino al 78%.</li>
+            </ul>
+
+            <hr style="border: 0; border-top: 1px solid rgba(0, 210, 255, 0.1); margin: 20px 0;">
+            
+            <a href="https://github.com/Tony223892/GreenCareApp_Service" target="_blank" class="btn-main" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                <i class="fab fa-github"></i> VEDI SU GITHUB
+            </a>
+        </div>
+    </div>
+</div>
+
+
     <section id="contact" class="contact-section">
     <h2><span class="accent-blue">Iniziamo un Progetto.</span></h2>
     <p>Disponibile per consulenze e collaborazioni tecniche.</p>

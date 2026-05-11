@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* Nero assoluto come base */
+    color: white;
+    overflow: hidden; 
+    height: 100vh; 
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* SFONDO A PUNTINI (EFFETTO SPAZIO) */
+.stars-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Crea puntini piccoli e nitidi */
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 50px 160px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #00d2ff, rgba(0,0,0,0)); /* Alcuni puntini blu */
+    background-size: 200px 200px; /* Ripetizione della "mappa stellare" */
+    opacity: 0.4; /* Regola questo per rendere i puntini più o meno visibili */
+}
+
+/* NAVBAR AGGIORNATA */
+.nav {
+    height: 80px;
+    width: 100%;
+    position: fixed; 
+    top: -100px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    /* Sfondo scuro coerente con il sito originale */
+    background: rgba(0, 0, 0, 0.9); 
+    backdrop-filter: blur(10px);
+    /* Bordo blu neon sottile */
+    border-bottom: 1px solid rgba(0, 210, 255, 0.2); 
+    z-index: 1000;
+    animation: dropNav 1s forwards 3s; 
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #00d2ff;
+    /* Bagliore costante sul logo */
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.7);
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px; /* Un po' più grande come nel sito */
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: 'Orbitron', sans-serif; /* Font futurista per i link */
+    text-transform: uppercase;
+    transition: all 0.3s ease; /* Transizione fluida per l'effetto luce */
+}
+
+/* EFFETTO ILLUMINAZIONE AL PASSAGGIO (HOVER) */
+.nav-links a:hover {
+    color: #00d2ff;
+    /* Effetto bagliore blu futuristico */
+    text-shadow: 0 0 10px #00d2ff, 0 0 20px rgba(0, 210, 255, 0.5);
+    transform: translateY(-2px); /* Leggera elevazione per dinamismo */
+}
+
+/* TITOLO FUTURISTICO */
+.main-content {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.futuristic-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    position: relative;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: titleFadeIn 1s ease-out forwards 2.0s; /* Appare poco prima di metà */
+}
+
+.futuristic-title span {
+    display: block;
+    color: #00d2ff;
+    text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+    font-size: 90px;
+    margin-top: 10px;
+}
+
+/* GESTIONE MANI */
+.hand-wrapper {
+    position: absolute; 
+    bottom: -1000px; 
+    left: 25%;      /* Posizione iniziale spostata a destra */
+    width: 450px; 
+    height: 700px; 
+    z-index: 10;
+    pointer-events: none;
+    animation: riseAndSlide 4.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hand {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center bottom;
+}
+
+.wireframe { 
+    opacity: 1; 
+    z-index: 2;
+    transform: scale(0.98);
+    transform-origin: bottom center;
+}
+
+.render { 
+    opacity: 0; 
+    z-index: 1; 
+}
+
+/* ANIMAZIONI */
+@keyframes titleFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes riseAndSlide {
+    0% { bottom: -700px; left: 25%; opacity: 0; }
+    25% { bottom: -20px; opacity: 1; left: 25%; }
+    100% { bottom: -20px; left: 68%; opacity: 1; }
+}
+
+.hand-wrapper .render {
+    animation: fadeInRender 1.5s ease-in-out forwards 1.2s; 
+}
+
+.hand-wrapper .wireframe {
+    animation: fadeOutWireframe 1.5s ease-in-out forwards 1.2s;
+}
+
+@keyframes fadeInRender { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeOutWireframe { 
+    0% { opacity: 1; filter: blur(0px); }
+    100% { opacity: 0; filter: blur(4px); }
+}
+
+@keyframes dropNav { to { top: 0; } }

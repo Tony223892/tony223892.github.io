@@ -117,18 +117,20 @@ body {
     font-size: clamp(40px, 7vw, 90px);
 }
 
-/* --- GESTIONE MANI RESPONSIVE (COMPLETA) --- */
+/* GESTIONE MANI - RESPONSIVE & SCALABILE */
 .hand-wrapper {
     position: absolute; 
-    /* Parte molto in basso rispetto all'altezza dello schermo */
-    bottom: -100vh; 
+    bottom: -1000px; 
     left: 25%;      
-    /* La larghezza si adatta alla larghezza dello schermo (vw) */
-    width: 30vw;    
-    max-width: 450px; /* Limite massimo per schermi giganti */
-    min-width: 280px; /* Limite minimo per schermi piccoli */
-    /* Mantiene il rapporto d'aspetto della tua immagine originale (450x700) */
+    
+    /* Ridimensionamento fluido basato sulla larghezza schermo */
+    width: 32vw; 
+    max-width: 450px; 
+    min-width: 280px; 
+    
+    /* Mantiene le proporzioni originali 450x700 senza distorcere */
     aspect-ratio: 450 / 700; 
+    
     z-index: 10;
     pointer-events: none;
     animation: riseAndSlide 4.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -140,7 +142,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Assicura che l'immagine non si schiacci */
+    /* contain assicura che l'immagine sia sempre interamente visibile */
     object-fit: contain; 
     object-position: center bottom;
 }
@@ -157,29 +159,32 @@ body {
     z-index: 1; 
 }
 
-/* --- ANIMAZIONI AGGIORNATE PER TUTTI GLI SCHERMI --- */
+/* ANIMAZIONI */
+@keyframes titleFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @keyframes riseAndSlide {
     0% { 
-        bottom: -80vh; 
+        bottom: -100vh; /* Parte dinamicamente fuori dal fondo */
         left: 25%; 
         opacity: 0; 
     }
     25% { 
-        /* La mano si ferma a una distanza proporzionale dal fondo */
-        bottom: -5vh; 
+        bottom: -20px; /* La tua posizione perfetta */
         opacity: 1; 
         left: 25%; 
     }
     100% { 
-        bottom: -5vh; 
-        /* Scivola verso destra in modo fluido */
-        left: 65%; 
+        bottom: -20px; 
+        left: 65%; /* Leggermente ridotto per non toccare il bordo su schermi stretti */
         opacity: 1; 
     }
 }
 
-/* Le altre animazioni restano identiche */
 .hand-wrapper .render {
     animation: fadeInRender 1.5s ease-in-out forwards 1.2s; 
 }
@@ -188,31 +193,29 @@ body {
     animation: fadeOutWireframe 1.5s ease-in-out forwards 1.2s;
 }
 
-@keyframes titleFadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes fadeInRender { 
+    from { opacity: 0; } 
+    to { opacity: 1; } 
 }
 
-@keyframes fadeInRender { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeOutWireframe { 
     0% { opacity: 1; filter: blur(0px); }
     100% { opacity: 0; filter: blur(4px); }
 }
 
-@keyframes dropNav { to { top: 0; } }
+@keyframes dropNav { 
+    to { top: 0; } 
+}
 
-/* --- OTTIMIZZAZIONE PER MOBILE (Opzionale ma consigliata) --- */
+/* OTTIMIZZAZIONE PER SCHERMI PICCOLI (MOBILE) */
 @media (max-width: 768px) {
     .hand-wrapper {
-        width: 60vw; /* Più grande sui telefoni per essere visibile */
-        left: 10%;
+        width: 55vw;
+        left: 15%;
     }
-    
     @keyframes riseAndSlide {
-        0% { bottom: -80vh; left: 10%; opacity: 0; }
-        25% { bottom: -2vh; opacity: 1; left: 10%; }
-        100% { bottom: -2vh; left: 30%; opacity: 1; }
+        0% { bottom: -100vh; left: 15%; opacity: 0; }
+        25% { bottom: -10px; opacity: 1; left: 15%; }
+        100% { bottom: -10px; left: 35%; opacity: 1; }
     }
 }
